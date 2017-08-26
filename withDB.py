@@ -25,12 +25,12 @@ def iWant(context):
         return True
 
 def connectDB(sql):
-# MySQL Connection 연결
+   # MySQL Connection 연결
     conn = pymysql.connect(host='localhost', user='root', password='passwd',
                        db='DB_Name', charset='utf8')
 
     curs = conn.cursor()
-    try:
+    try: #예외처리
         curs.execute(sql)
         conn.commit()
     except pymysql.Error as err:
@@ -40,6 +40,7 @@ def connectDB(sql):
     conn.close()
 
 def insertDB(company_url_full, company_name, company_title, company_sector,  company_career, company_edu, company_similarity,company_salary,index):
-    sql="INSERT INTO company VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)"%("'"+company_url_full+"'", "'"+company_name+"'", "'"+company_title+"'", "'"+company_sector+"'", "'"+company_career+"'", "'"+company_edu+"'","'"+company_similarity+"'","'"+company_salary+"'","'"+index+"'")
+  #삽입  
+  sql="INSERT INTO company VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)"%("'"+company_url_full+"'", "'"+company_name+"'", "'"+company_title+"'", "'"+company_sector+"'", "'"+company_career+"'", "'"+company_edu+"'","'"+company_similarity+"'","'"+company_salary+"'","'"+index+"'")
     connectDB(sql)
 

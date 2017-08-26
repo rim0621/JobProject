@@ -28,11 +28,11 @@ def getSimilarity(detail):
     count=0;
     myword=['빅데이터','하둡','딥러닝','개발자','응용','python','c','c++','응용시스템','프로그램','언어','소프트웨어','IOT','사물인터넷']
     kkma=Kkma()
-    a=kkma.nouns(detail)
+    a=kkma.nouns(detail) 
     embedding=Word2Vec([a],min_count=1,size=32,window=4,iter=10,sg=1)
     for i in range (0,len(myword)):
         try:
-            prediction.append(embedding.most_similar(positive=myword[i],topn=1))
+            prediction.append(embedding.most_similar(positive=myword[i],topn=1))#내가 원하는 단어랑 유사도 비교
             count=count+1
         except KeyError:
             pass

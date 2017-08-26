@@ -1,5 +1,5 @@
 # 개요
- 어느 덧 취업을 앞두고 있는 4학년. 인터넷에는 사람인, 잡코리아등 많은 구직 사이트가 존재하고 새로운 정보가 어마어마하게 있고 지금 또한 올라오고 있다. 나와 상관 없는 분야, 또는 같은 분야에서 내 관심분야 밖인 공고도 많이 볼 수 있다. 황금같은 시간을 조금이나마 줄이기 위해 나에게 적합한 공고, 내가 원하는 분야만 볼 수 있도록 시작하게 되었다.
+ 인터넷에는 사람인, 잡코리아등 많은 구직 사이트가 존재하고 새로운 정보가 어마어마하게 있고 지금 또한 올라오고 있다. 나와 상관 없는 분야, 또는 같은 분야에서 내 관심분야 밖인 공고도 많이 볼 수 있다. 황금같은 시간을 조금이나마 줄이기 위해 나에게 적합한 공고, 내가 원하는 분야만 볼 수 있도록 시작하게 되었다.
 
 # Web Crawling
 ![Alt text](/img/crawling.png)
@@ -20,8 +20,15 @@
  1. form fbchat import Client 를 선언한다.
  2. Client()에 아이디,패스워드를 입력한다.
  3. searchForUsers()에 받는 사람을 적는다(이메일|아이디)
-
-#참고
+ 4. 보낼 메시지를 적는다.
+# Word2Vec
+![Alt text](/img/word2vec.png)
+ 1. from gensim.models.word2vec import Word2Vec 선언한다.
+ 2. from konlpy.tag import Kkma 선언한다.
+ 3. kkma.nouns()를 가지고 문장들을 단어별로 나눈다.
+ 4. Word2Vec()로 단어들을 학습시킨다.
+ 5. embedding.most_similar()가지고 내가 원하는 단어들과 가장 유사한 단어를 뽑는다.
+# 참고
  1. 크롤링 https://beomi.github.io/2017/04/20/HowToMakeWebCrawler-Notice-with-Telegram/
  2. 크롤링 https://beomi.github.io/2017/01/20/HowToMakeWebCrawler/
  3. 셀리늄 https://beomi.github.io/2017/02/27/HowToMakeWebCrawler-With-Selenium/
