@@ -3,4 +3,8 @@
 
 # Web Crawling
 ![Alt text](/img/crawling.png)
- 
+ 1. 위사진과 같이 requests 와 BeautifulSoup을 import 한다.
+ 2. requests.get에 다가 크롤링 할 주소를 쓴다.
+ 3. 위에서 선언한 BeautifulSoup을 가지고 이쁘게 html을 뽑는다.
+ 4. 가지고온 html을 필요한 부분만 가지고 오기 위해서 soup.find_all을 사용한다.
+    find_all안에 넣을 부분은 브라우져에서 F12를 누르고 해당 부분을 오른쪽 마우스->copy->copy selector을 누르면 필요한 부분이 복사된다. 처음에는 어려웠지만 여러번 시행착오를 거치면 쉬워진다.
