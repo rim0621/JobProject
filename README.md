@@ -28,6 +28,8 @@
  3. kkma.nouns()를 가지고 문장들을 단어별로 나눈다.
  4. Word2Vec()로 단어들을 학습시킨다.
  5. embedding.most_similar()가지고 내가 원하는 단어들과 가장 유사한 단어를 뽑는다.
+# result
+![Alt text](/img/web.png)
 # 참고
  1. 크롤링 https://beomi.github.io/2017/04/20/HowToMakeWebCrawler-Notice-with-Telegram/
  2. 크롤링 https://beomi.github.io/2017/01/20/HowToMakeWebCrawler/
